@@ -20,9 +20,9 @@ app.use(express.static("public"));
 app.use(routes);
 
 // Connect to DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/userdb", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutdb", { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Start The Server
 app.listen(PORT, () => {
-    console.log(`App running on port http://localhost:${PORT}`);
+    console.log(`listening on http://localhost:${PORT}`);
 });
