@@ -7,6 +7,13 @@ const API = {
       console.log(err)
     }
     const json = await res.json();
+    const lastWorkout = json[json.length - 1].exercises
+    let totalexercise = 0;
+    lastWorkout.forEach(exercises => {
+      return totalexercise += exercises.duration
+    });
+
+    json[json.length - 1].totalDuration = totalexercise
 
     return json[json.length - 1];
   },
