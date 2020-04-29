@@ -13,3 +13,5 @@ router.post("/workouts", (req, res) => {
 //updates a workout
 router.put("/workouts/:id", (req, res) => {
 });
+
+module.exports = router;
