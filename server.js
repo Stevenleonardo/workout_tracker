@@ -21,7 +21,7 @@ app.use(routes);
 
 // Connect to DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true, useUnifiedTopology: true });
-
+mongoose.connect(MONGODB_URI);
 // Start The Server
 app.listen(PORT, () => {
     console.log(`listening on http://localhost:${PORT}`);
